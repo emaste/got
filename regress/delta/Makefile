@@ -6,7 +6,7 @@ SRCS = delta.c error.c opentemp.c path.c inflate.c sha1.c delta_test.c
 CPPFLAGS = -I${.CURDIR}/../../include -I${.CURDIR}/../../lib
 LDADD = -lz
 
-NOMAN = yes
+MAN=
 
 regress: ${PROG} .PHONY
 	${.OBJDIR}/delta_test -q

@@ -23,7 +23,7 @@ LDADD +=	-L${KCGIBASE}/lib -lkcgihtml -lkcgi -lz
 LDSTATIC =	${STATIC}
 
 .if ${GOT_RELEASE} != "Yes"
-NOMAN = Yes
+MAN=
 .endif
 
 realinstall:
