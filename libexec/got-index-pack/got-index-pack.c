@@ -40,6 +40,8 @@
 #include <assert.h>
 #include <dirent.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 #include "got_object.h"
 
@@ -244,7 +246,7 @@ read_packed_object(struct got_pack *pack, struct got_indexed_object *obj,
 			free(data);
 			break;
 		}
-		if (asprintf(&header, "%s %lld", obj_label, obj->size) == -1) {
+		if (asprintf(&header, "%s %lld", obj_label, (long long)obj->size) == -1) {
 			err = got_error_from_errno("asprintf");
 			free(data);
 			break;

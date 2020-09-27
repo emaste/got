@@ -20,6 +20,8 @@
 #include <string.h>
 #include <stdio.h>
 
+#include "openbsd-compat.h"
+
 #include "got_opentemp.h"
 #include "got_error.h"
 

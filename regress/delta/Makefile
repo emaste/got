@@ -8,7 +8,7 @@ LDADD = -lz
 
 NOMAN = yes
 
-run-regress-delta_test:
+regress: ${PROG} .PHONY
 	${.OBJDIR}/delta_test -q
 
-.include <bsd.regress.mk>
+.include <bsd.prog.mk>

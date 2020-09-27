@@ -27,6 +27,8 @@
 #include <zlib.h>
 #include <time.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 #include "got_object.h"
 #include "got_path.h"
