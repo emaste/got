@@ -8,8 +8,7 @@ SRCS=		got-read-gotconfig.c error.c inflate.c object_parse.c \
 
 CPPFLAGS = -I${.CURDIR}/../../../include -I${.CURDIR}/../../../lib \
 	-I${.CURDIR}/../../../libexec/got-read-gotconfig
-LDADD = -lutil -lz
-DPADD = ${LIBZ} ${LIBUTIL}
+LIBDADD = util z
 LDSTATIC = ${STATIC}
 
 .PATH:	${.CURDIR}/../../../lib ${.CURDIR}/../../../libexec/got-read-gotconfig
