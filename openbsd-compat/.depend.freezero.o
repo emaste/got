@@ -1,9 +1,6 @@
-freezero.o: freezero.c /usr/home/emaste/src/got/openbsd-compat/stdlib.h \
-  /usr/include/stdlib.h \
-  /usr/home/emaste/src/got/openbsd-compat/sys/cdefs.h \
-  /usr/include/sys/cdefs.h /usr/include/sys/_null.h \
-  /usr/include/sys/_types.h /usr/include/machine/_types.h \
-  /usr/include/x86/_types.h /usr/include/machine/_limits.h \
-  /usr/include/x86/_limits.h /usr/include/string.h \
-  /usr/include/strings.h /usr/include/xlocale/_strings.h \
-  /usr/include/xlocale/_string.h
+freezero.o: freezero.c /usr/include/stdlib.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_null.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/x86/_types.h \
+  /usr/include/machine/_limits.h /usr/include/x86/_limits.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h
