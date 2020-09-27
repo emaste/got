@@ -15,11 +15,10 @@ MAN =		${PROG}.1
 CPPFLAGS = -I${.CURDIR}/../include -I${.CURDIR}/../lib
 
 .if defined(PROFILE)
-LDADD = -lpanel_p -lncursesw_p -lutil_p -lz_p -lpthread_p -lc_p
+LIBADD = panel_p ncursesw_p util_p z_p pthread_p c_p
 .else
-LDADD = -lpanel -lncursesw -lutil -lz -lpthread
+LIBADD = panel ncursesw util z pthread
 .endif
-DPADD = ${LIBZ} ${LIBUTIL}
 
 .if ${GOT_RELEASE} != "Yes"
 MAN=
