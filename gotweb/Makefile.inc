@@ -1,5 +1,5 @@
 KCGIBASE ?=	/usr/local
-LDADD +=	-lz -lutil
+LIBADD +=	z util
 LDSTATIC =	${STATIC}
 CHROOT_DIR ?=	/var/www
 GOTWEB_DIR =	/cgi-bin/gotweb

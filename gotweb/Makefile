@@ -16,7 +16,8 @@ MAN =		${PROG}.conf.5 ${PROG}.8
 
 CPPFLAGS +=	-I${.CURDIR}/../include -I${.CURDIR}/../lib -I${.CURDIR} \
 		-I${KCGIBASE}/include
-LDADD +=	-L${KCGIBASE}/lib -lkcgihtml -lkcgi -lz
+LDADD +=	-L${KCGIBASE}/lib -lkcgihtml -lkcgi
+LIBADD +=	z
 LDSTATIC =	${STATIC}
 
 .if ${GOT_RELEASE} != "Yes"

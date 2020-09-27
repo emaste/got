@@ -8,7 +8,8 @@ CFLAGS += ${CPPFLAGS} -I${OPENBSD_COMPAT}
 CFLAGS += -Wno-pointer-sign
 
 LDFLAGS += -L${OPENBSD_COMPAT}
-LDADD += -lopenbsd-compat -lmd
+LDADD += -lopenbsd-compat
+LIBADD += md
 
 .if "${GOT_RELEASE}" == "Yes"
 PREFIX ?= /usr/local
