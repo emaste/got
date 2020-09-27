@@ -15,11 +15,11 @@ MAN =		${PROG}.1 got-worktree.5 git-repository.5 got.conf.5
 CPPFLAGS = -I${.CURDIR}/../include -I${.CURDIR}/../lib
 
 .if defined(PROFILE)
-LDADD = -lutil_p -lz_p -lc_p
+LDADD += -lutil_p -lz_p -lc_p
+DPADD += ${LIBZ} ${LIBUTIL}
 .else
-LDADD = -lutil -lz
+LIBADD += util z
 .endif
-DPADD = ${LIBZ} ${LIBUTIL}
 
 .if ${GOT_RELEASE} != "Yes"
 MAN=
