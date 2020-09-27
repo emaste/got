@@ -26,7 +26,7 @@ LDADD = -lutil -lz
 DPADD = ${LIBZ} ${LIBUTIL}
 
 .if ${GOT_RELEASE} != "Yes"
-NOMAN = Yes
+MAN=
 .endif
 
 dist:
