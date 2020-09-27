@@ -25,8 +25,4 @@ DPADD = ${LIBZ} ${LIBUTIL}
 NOMAN = Yes
 .endif
 
-realinstall:
-	${INSTALL} ${INSTALL_COPY} -o ${BINOWN} -g ${BINGRP} \
-	-m ${BINMODE} ${PROG} ${BINDIR}/${PROG}
-
 .include <bsd.prog.mk>

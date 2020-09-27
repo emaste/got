@@ -43,6 +43,8 @@
 #include <syslog.h>
 #include <unistd.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 #include "gotweb.h"
 

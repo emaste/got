@@ -78,4 +78,6 @@ fetch:
 tree:
 	./tree.sh -q
 
-.include <bsd.regress.mk>
+regress: ${REGRESS_TARGETS} .PHONY .SILENT
+
+.include <bsd.prog.mk>
