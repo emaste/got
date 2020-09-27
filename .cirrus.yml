@@ -1,0 +1,17 @@
+freebsd_instance:
+  #image: freebsd-12-1-release-amd64
+  image_family: freebsd-12-1-snap
+
+env:
+  CIRRUS_CLONE_DEPTH: 1
+
+task:
+  pkg_install_script:
+  - pkg install -y git-lite
+  script:
+  - make -j$(sysctl -n hw.ncpu)
+  install_script:
+  - make install
+  test_script:
+  - make regress
+  - make -C regress regress
