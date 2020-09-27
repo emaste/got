@@ -9,7 +9,7 @@ SRCS = error.c privsep.c reference.c sha1.c object.c object_parse.c path.c \
 CPPFLAGS = -I${.CURDIR}/../../include -I${.CURDIR}/../../lib
 LDADD = -lutil -lz
 
-NOMAN = yes
+MAN=
 
 regress: ${PROG} .PHONY
 	${.OBJDIR}/fetch_test -q
