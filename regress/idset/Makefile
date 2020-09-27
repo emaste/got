@@ -9,7 +9,7 @@ LDADD = -lutil -lz
 
 NOMAN = yes
 
-run-regress-idset_test:
+regress: ${PROG} .PHONY
 	${.OBJDIR}/idset_test -q
 
-.include <bsd.regress.mk>
+.include <bsd.prog.mk>
