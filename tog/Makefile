@@ -22,7 +22,7 @@ LDADD = -lpanel -lncursesw -lutil -lz -lpthread
 DPADD = ${LIBZ} ${LIBUTIL}
 
 .if ${GOT_RELEASE} != "Yes"
-NOMAN = Yes
+MAN=
 .endif
 
 .include <bsd.prog.mk>
