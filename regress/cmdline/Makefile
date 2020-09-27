@@ -80,4 +80,6 @@ fetch:
 tree:
 	./tree.sh -q -r "$(GOT_TEST_ROOT)"
 
-.include <bsd.regress.mk>
+regress: ${REGRESS_TARGETS} .PHONY .SILENT
+
+.include <bsd.prog.mk>

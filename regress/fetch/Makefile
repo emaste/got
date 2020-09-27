@@ -11,7 +11,7 @@ LDADD = -lutil -lz
 
 NOMAN = yes
 
-run-regress-fetch_test:
+regress: ${PROG} .PHONY
 	${.OBJDIR}/fetch_test -q
 
-.include <bsd.regress.mk>
+.include <bsd.prog.mk>

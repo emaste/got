@@ -8,7 +8,7 @@ LDADD = -lutil -lz
 
 NOMAN = yes
 
-run-regress-path_test:
+regress: ${PROG} .PHONY
 	${.OBJDIR}/path_test -q
 
-.include <bsd.regress.mk>
+.include <bsd.prog.mk>
