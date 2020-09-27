@@ -21,6 +21,8 @@
 #include <stdlib.h>
 #include <limits.h>
 
+#include "openbsd-compat.h"
+
 #include "got_lib_sha1.h"
 
 int

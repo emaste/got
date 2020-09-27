@@ -42,6 +42,8 @@
 #include <netdb.h>
 #include <netinet/in.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 #include "got_reference.h"
 #include "got_repository.h"
