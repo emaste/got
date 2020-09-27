@@ -76,6 +76,8 @@
 #include <time.h>
 #include <unistd.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 #include "got_opentemp.h"
 #include "got_object.h"

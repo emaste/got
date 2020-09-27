@@ -24,6 +24,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "openbsd-compat.h"
+
 #include "got_object.h"
 #include "got_opentemp.h"
 #include "got_error.h"
