@@ -8,4 +8,4 @@ realinstall:
 	${INSTALL} ${INSTALL_COPY} -o root -g daemon -m 755 ${PROG} \
 	    ${DESTDIR}${CHROOT_DIR}${LIBEXECDIR}/${PROG}
 
-NOMAN = Yes
+MAN=
