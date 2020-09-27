@@ -33,9 +33,8 @@ __FBSDID("$FreeBSD$");
 
 int getdtablecount(void);
 
-/* 
+/*
  * Return the count of open file descriptors for this process.
- *
  */
 int
 getdtablecount(void)
