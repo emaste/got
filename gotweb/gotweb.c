@@ -47,6 +47,8 @@
 #include <kcgi.h>
 #include <kcgihtml.h>
 
+#include "openbsd-compat.h"
+
 #include "gotweb.h"
 
 #ifndef nitems
