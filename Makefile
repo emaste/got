@@ -1,4 +1,4 @@
-SUBDIR = libexec got tog
+SUBDIR = openbsd-compat libexec got tog
 
 .PHONY: release dist
 

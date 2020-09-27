@@ -23,6 +23,8 @@
 #include <unistd.h>
 #include <err.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 #include "got_path.h"
 

@@ -35,6 +35,8 @@
 #include <string.h>
 #include <unistd.h>
 
+#include "openbsd-compat.h"
+
 #include "buf.h"
 #include "rcsutil.h"
 
