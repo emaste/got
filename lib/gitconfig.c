@@ -39,6 +39,8 @@
 #include <unistd.h>
 #include <errno.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 
 #include "got_lib_gitconfig.h"

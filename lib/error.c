@@ -25,6 +25,8 @@
 #include <zlib.h>
 #include <uuid.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 #include "got_object.h"
 

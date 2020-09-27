@@ -86,6 +86,8 @@
 #include <sha1.h>
 #include <zlib.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 #include "got_object.h"
 #include "got_diff.h"

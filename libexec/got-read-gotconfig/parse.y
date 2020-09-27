@@ -36,6 +36,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 #include "gotconfig.h"
 
@@ -61,7 +63,7 @@ int		 igetc(void);
 int		 lgetc(int);
 void		 lungetc(int);
 int		 findeol(void);
-static int	 parseport(char *, long long *);
+static int	 parseport(char *, int64_t *);
 
 TAILQ_HEAD(symhead, sym)	 symhead = TAILQ_HEAD_INITIALIZER(symhead);
 struct sym {
@@ -126,7 +128,7 @@ boolean		: STRING {
 		;
 numberstring	: NUMBER				{
 			char	*s;
-			if (asprintf(&s, "%lld", $1) == -1) {
+			if (asprintf(&s, "%lld", (long long)$1) == -1) {
 				yyerror("string: asprintf");
 				YYERROR;
 			}
@@ -417,7 +419,7 @@ getservice(char *n)
 }
 
 static int
-parseport(char *port, long long *pn)
+parseport(char *port, int64_t *pn)
 {
 	if ((*pn = getservice(port)) == -1) {
 		*pn = 0LL;
