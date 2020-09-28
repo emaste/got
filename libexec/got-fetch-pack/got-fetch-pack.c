@@ -439,7 +439,7 @@ match_capabilities(char **my_capabilities, struct got_pathlist_head *symrefs,
 {
 	const struct got_error *err = NULL;
 	char *capa, *equalsign;
-	int i;
+	size_t i;
 
 	*my_capabilities = NULL;
 	do {
