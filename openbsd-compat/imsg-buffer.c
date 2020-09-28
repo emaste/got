@@ -260,7 +260,7 @@ msgbuf_write(struct msgbuf *msgbuf)
 		cmsg->cmsg_len = CMSG_LEN(sizeof(int));
 		cmsg->cmsg_level = SOL_SOCKET;
 		cmsg->cmsg_type = SCM_RIGHTS;
-		*(int *)CMSG_DATA(cmsg) = buf->fd;
+		*(int *)(void *)CMSG_DATA(cmsg) = buf->fd;
 	}
 
 again:
