@@ -13,12 +13,7 @@ LIBADD += md
 WARNS = 0
 CFLAGS += -fPIC
 
-.if "${GOT_RELEASE}" == "Yes"
-PREFIX ?= /usr/local
-BINDIR ?= ${PREFIX}/bin
-LIBEXECDIR ?= ${PREFIX}/libexec
-MANDIR ?= ${PREFIX}/man/man
-.else
+.if "${GOT_RELEASE}" != "Yes"
 CFLAGS += -Werror -Wall -Wstrict-prototypes -Wunused-variable
 PREFIX ?= ${HOME}
 BINDIR ?= ${PREFIX}/bin
