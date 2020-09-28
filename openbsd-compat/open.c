@@ -17,9 +17,11 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
-int open_posix(const char *, int, ...);
-int openat_posix(int, const char *, int, ...);
+#include "openbsd-compat.h"
+#undef open
+#undef openat
 
 /*
  * POSIX mandates that open(symlink, O_NOFOLLOW) fail with errno == ELOOP.

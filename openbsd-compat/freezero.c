@@ -17,7 +17,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void freezero(void *, size_t);
+#include "openbsd-compat.h"
 
 void
 freezero(void *ptr, size_t sz)
