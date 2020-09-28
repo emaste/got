@@ -5488,7 +5488,7 @@ done:
 static void
 list_commands(FILE *fp)
 {
-	int i;
+	size_t i;
 
 	fprintf(fp, "commands:");
 	for (i = 0; i < nitems(tog_commands); i++) {
@@ -5676,7 +5676,7 @@ main(int argc, char *argv[])
 		argc = 1;
 		cmd_argv = make_argv(argc, cmd->name);
 	} else {
-		int i;
+		size_t i;
 
 		/* Did the user specify a command? */
 		for (i = 0; i < nitems(tog_commands); i++) {
