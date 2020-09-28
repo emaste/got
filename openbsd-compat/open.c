@@ -18,6 +18,9 @@
 #include <fcntl.h>
 #include <stdarg.h>
 
+int open_posix(const char *, int, ...);
+int openat_posix(int, const char *, int, ...);
+
 /*
  * POSIX mandates that open(symlink, O_NOFOLLOW) fail with errno == ELOOP.
  * FreeBSD chooses to deviate from this, but Got depends on it.
