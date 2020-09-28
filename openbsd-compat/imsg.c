@@ -104,7 +104,7 @@ again:
 			j = ((char *)cmsg + cmsg->cmsg_len -
 			    (char *)CMSG_DATA(cmsg)) / sizeof(int);
 			for (i = 0; i < j; i++) {
-				fd = ((int *)CMSG_DATA(cmsg))[i];
+				fd = ((int *)(void *)CMSG_DATA(cmsg))[i];
 				if (ifd != NULL) {
 					ifd->fd = fd;
 					TAILQ_INSERT_TAIL(&ibuf->fds, ifd,
@@ -251,7 +251,7 @@ imsg_close(struct imsgbuf *ibuf, struct ibuf *msg)
 {
 	struct imsg_hdr	*hdr;
 
-	hdr = (struct imsg_hdr *)msg->buf;
+	hdr = (struct imsg_hdr *)(void *)msg->buf;
 
 	hdr->flags &= ~IMSGF_HASFD;
 	if (msg->fd != -1)
