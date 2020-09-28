@@ -8,6 +8,7 @@ SRCS=		got-read-pack.c delta.c error.c inflate.c object_cache.c \
 		privsep.c sha1.c delta_cache.c
 
 CPPFLAGS = -I${.CURDIR}/../../include -I${.CURDIR}/../../lib
+LDFLAGS += -L${.OBJDIR}/../../openbsd-compat
 LIBADD = util z
 
 .include <bsd.prog.mk>

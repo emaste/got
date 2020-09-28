@@ -4,6 +4,7 @@ PROG = path_test
 SRCS = error.c path.c sha1.c path_test.c
 
 CPPFLAGS = -I${.CURDIR}/../../include -I${.CURDIR}/../../lib
+LDFLAGS += -L${.OBJDIR}/../openbsd-compat
 LIBADD = util z
 
 MAN=
