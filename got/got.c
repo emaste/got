@@ -175,7 +175,7 @@ static struct got_cmd got_commands[] = {
 static void
 list_commands(void)
 {
-	int i;
+	size_t i;
 
 	fprintf(stderr, "commands:");
 	for (i = 0; i < nitems(got_commands); i++) {
@@ -7869,7 +7869,8 @@ write_cmd_list(FILE *f, const char *branch_name,
     struct got_object_id_queue *commits)
 {
 	const struct got_error *err = NULL;
-	int n, i;
+	size_t i;
+	int n;
 	char *id_str;
 	struct got_object_qid *qid;
 
@@ -8060,9 +8061,9 @@ histedit_parse_list(struct got_histedit_list *histedit_cmds,
 {
 	const struct got_error *err = NULL;
 	char *line = NULL, *p, *end;
-	size_t size;
+	size_t i, size;
 	ssize_t len;
-	int lineno = 0, i;
+	int lineno = 0;
 	const struct got_histedit_cmd *cmd;
 	struct got_object_id *commit_id = NULL;
 	struct got_histedit_list_entry *hle = NULL;
