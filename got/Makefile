@@ -13,6 +13,7 @@ SRCS=		got.c blame.c commit_graph.c delta.c diff.c \
 MAN =		${PROG}.1 got-worktree.5 git-repository.5 got.conf.5
 
 CPPFLAGS = -I${.CURDIR}/../include -I${.CURDIR}/../lib
+LDFLAGS += -L${.OBJDIR}/../openbsd-compat
 
 .if defined(PROFILE)
 LDADD += -lutil_p -lz_p -lc_p

@@ -17,6 +17,7 @@ MAN =		${PROG}.conf.5 ${PROG}.8
 CPPFLAGS +=	-I${.CURDIR}/../include -I${.CURDIR}/../lib -I${.CURDIR} \
 		-I${KCGIBASE}/include
 LDADD +=	-L${KCGIBASE}/lib -lkcgihtml -lkcgi
+LDFLAGS +=	-L${.OBJDIR}/../openbsd-compat
 LIBADD +=	z
 LDSTATIC =	${STATIC}
 
