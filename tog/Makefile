@@ -13,6 +13,7 @@ SRCS=		tog.c blame.c commit_graph.c delta.c diff.c \
 MAN =		${PROG}.1
 
 CPPFLAGS = -I${.CURDIR}/../include -I${.CURDIR}/../lib
+LDFLAGS += -L${.OBJDIR}/../openbsd-compat
 
 .if defined(PROFILE)
 LIBADD = panel_p ncursesw_p util_p z_p pthread_p c_p
