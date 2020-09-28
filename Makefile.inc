@@ -14,10 +14,9 @@ WARNS = 0
 CFLAGS += -fPIC
 
 .if "${GOT_RELEASE}" == "Yes"
-PREFIX ?= /usr/local
-BINDIR ?= ${PREFIX}/bin
-LIBEXECDIR ?= ${PREFIX}/libexec
-MANDIR ?= ${PREFIX}/man/man
+BINDIR ?= /usr/bin
+LIBEXECDIR ?= /usr/libexec
+MANDIR ?= /usr/share/man/man
 .else
 CFLAGS += -Werror -Wall -Wstrict-prototypes -Wunused-variable
 PREFIX ?= ${HOME}
