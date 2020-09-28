@@ -17,6 +17,11 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <stdarg.h>
+#include <stdlib.h>
+
+#include "openbsd-compat.h"
+#undef open
+#undef openat
 
 /*
  * POSIX mandates that open(symlink, O_NOFOLLOW) fail with errno == ELOOP.

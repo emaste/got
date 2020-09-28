@@ -17,6 +17,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "openbsd-compat.h"
+
 void
 freezero(void *ptr, size_t sz)
 {
