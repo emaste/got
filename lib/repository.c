@@ -554,7 +554,8 @@ got_repo_open(struct got_repository **repop, const char *path,
 	struct got_repository *repo = NULL;
 	const struct got_error *err = NULL;
 	char *abspath;
-	int i, tried_root = 0;
+	size_t i;
+	int tried_root = 0;
 
 	*repop = NULL;
 
@@ -642,7 +643,7 @@ const struct got_error *
 got_repo_close(struct got_repository *repo)
 {
 	const struct got_error *err = NULL, *child_err;
-	int i;
+	size_t i;
 
 	for (i = 0; i < nitems(repo->packidx_cache); i++) {
 		if (repo->packidx_cache[i] == NULL)
@@ -816,7 +817,7 @@ cache_packidx(struct got_repository *repo, struct got_packidx *packidx,
     const char *path_packidx)
 {
 	const struct got_error *err = NULL;
-	int i;
+	size_t i;
 
 	for (i = 0; i < nitems(repo->packidx_cache); i++) {
 		if (repo->packidx_cache[i] == NULL)
@@ -869,7 +870,7 @@ got_repo_search_packidx(struct got_packidx **packidx, int *idx,
 	DIR *packdir;
 	struct dirent *dent;
 	char *path_packidx;
-	int i;
+	size_t i;
 
 	/* Search pack index cache. */
 	for (i = 0; i < nitems(repo->packidx_cache); i++) {
@@ -1007,7 +1008,7 @@ got_repo_cache_pack(struct got_pack **packp, struct got_repository *repo,
 	const struct got_error *err = NULL;
 	struct got_pack *pack = NULL;
 	struct stat sb;
-	int i;
+	size_t i;
 
 	if (packp)
 		*packp = NULL;
@@ -1075,7 +1076,7 @@ struct got_pack *
 got_repo_get_cached_pack(struct got_repository *repo, const char *path_packfile)
 {
 	struct got_pack *pack = NULL;
-	int i;
+	size_t i;
 
 	for (i = 0; i < nitems(repo->packs); i++) {
 		pack = &repo->packs[i];
@@ -1105,7 +1106,7 @@ got_repo_init(const char *repo_path)
 	    "\tfilemode = true\n"
 	    "\tbare = true\n";
 	char *path;
-	int i;
+	size_t i;
 
 	if (!got_path_dir_is_empty(repo_path))
 		return got_error(GOT_ERR_DIR_NOT_EMPTY);
