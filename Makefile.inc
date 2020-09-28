@@ -11,6 +11,9 @@ LDFLAGS += -L${OPENBSD_COMPAT}
 LDADD += -lopenbsd-compat
 LIBADD += md
 
+WARNS = 0
+CFLAGS += -fPIC
+
 .if "${GOT_RELEASE}" == "Yes"
 PREFIX ?= /usr/local
 BINDIR ?= ${PREFIX}/bin
@@ -33,7 +36,5 @@ DEBUG = -O0 -pg -g -static
 .else
 DEBUG = -O0 -g
 .endif
-
-WARNS = 6
 
 .endif
