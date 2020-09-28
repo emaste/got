@@ -21,7 +21,7 @@
 #include <string.h>
 #include <unistd.h>
 
-void *recallocarray(void *, size_t, size_t, size_t);
+#include "openbsd-compat.h"
 
 /*
  * This is sqrt(SIZE_MAX+1), as s1*s2 <= SIZE_MAX
