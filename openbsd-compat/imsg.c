@@ -30,7 +30,7 @@
 
 #include "imsg.h"
 
-int	 imsg_fd_overhead = 0;
+static int	 imsg_fd_overhead = 0;
 
 static int	 imsg_get_fd(struct imsgbuf *);
 
