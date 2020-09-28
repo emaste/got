@@ -7,7 +7,7 @@ SRCS = error.c privsep.c reference.c sha1.c object.c object_parse.c path.c \
 	fetch.c gotconfig.c fetch_test.c
 
 CPPFLAGS = -I${.CURDIR}/../../include -I${.CURDIR}/../../lib
-LDFLAGS += -L${.OBJDIR}/../openbsd-compat
+LDFLAGS += -L${.OBJDIR}/../../openbsd-compat
 LIBADD = util z
 
 MAN=
