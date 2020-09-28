@@ -7,7 +7,6 @@ OPENBSD_COMPAT := ${.PARSEDIR}/openbsd-compat
 CFLAGS += ${CPPFLAGS} -I${OPENBSD_COMPAT}
 CFLAGS += -Wno-pointer-sign
 
-LDFLAGS += -L${OPENBSD_COMPAT}
 LDADD += -lopenbsd-compat
 LIBADD += md
 
