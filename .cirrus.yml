@@ -17,3 +17,4 @@ task:
   - make regress
   - make -C regress -i regress
   - ls -lR /tmp/got-test-*
+  - sh core-backtrace.sh
