@@ -15,4 +15,5 @@ task:
   - make install
   test_script:
   - make regress
-  - make -C regress regress
+  - make -C regress -i regress
+  - ls -lR /tmp/got-test-*
