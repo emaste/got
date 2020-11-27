@@ -57,7 +57,7 @@ log_cmd() {
 	$* >> $logfile 2>&1
 }
 
-ncpu=`sysctl -n hw.ncpuonline`
+ncpu=`sysctl -n hw.ncpu`
 lockfile=$worktree/.${prog}.lock
 
 cd "$worktree"
@@ -75,21 +75,21 @@ date -u >> build.log
 printf "\nRunning on " >> build.log
 sysctl -n kern.version >> build.log
 
-printf "\n\tCleaning the work tree\n\n" >> build.log
-log_cmd build.log got status
-log_cmd build.log make clean
+#printf "\n\tCleaning the work tree\n\n" >> build.log
+#log_cmd build.log got status
+#log_cmd build.log make clean
 
-printf "\n\n\tUpdating the work tree\n\n" >> build.log
-log_cmd build.log cat .got/base-commit
+#printf "\n\n\tUpdating the work tree\n\n" >> build.log
+#log_cmd build.log cat .got/base-commit
 old_basecommit=`cat .got/base-commit`
-log_cmd build.log /usr/local/bin/got update -b "$branch"
-update_status="$?"
-if [ "$update_status" != "0" ]; then
-	mail $fromaddr_arg -s "$prog update failure" $recipients < build.log
-	rm -rf "$lockfile"
-	exit 0
-fi
-new_basecommit=`cat .got/base-commit`
+#log_cmd build.log /usr/local/bin/got update -b "$branch"
+#update_status="$?"
+#if [ "$update_status" != "0" ]; then
+#	mail $fromaddr_arg -s "$prog update failure" $recipients < build.log
+#	rm -rf "$lockfile"
+#	exit 0
+#fi
+#new_basecommit=`cat .got/base-commit`
 
 if [ "$force" != "1" -a "$old_basecommit" == "$new_basecommit" ]; then
 	rm -rf "$lockfile"
@@ -134,6 +134,7 @@ log_cmd build.log make obj
 log_cmd build.log make -j $ncpu GOT_RELEASE=Yes
 log_cmd build.log make -j $ncpu GOT_RELEASE=Yes web
 build_status="$?"
+cat build.log
 if [ "$build_status" != "0" ]; then
 	mail $fromaddr_arg -s "$prog release mode build failure" $recipients < build.log
 	rm -rf "$lockfile"
