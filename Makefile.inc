@@ -8,7 +8,9 @@ OPENBSD_COMPAT := ${.PARSEDIR}/openbsd-compat
 CFLAGS += ${CPPFLAGS} -I${OPENBSD_COMPAT}
 CFLAGS += -Wno-pointer-sign
 
-LDFLAGS += -L${OPENBSD_COMPAT}
+LDFLAGS += -L${.OBJDIR}/openbsd-compat
+LDFLAGS += -L${.OBJDIR}/../openbsd-compat
+LDFLAGS += -L${.OBJDIR}/../../openbsd-compat
 LDADD += -lopenbsd-compat -lmd
 
 .if "${GOT_RELEASE}" == "Yes"
