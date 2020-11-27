@@ -16,6 +16,7 @@ task:
   - cat regress.log || true
   failure_log_script:
   - cat failures.log || true
-  final_script:
-  - ls -lR /tmp/got-test-* || true
+  backtrace_script:
   - sh core-backtrace.sh
+  ls_script:
+  - ls -lR /tmp/got-test-* || true
