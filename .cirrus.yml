@@ -9,12 +9,7 @@ task:
   pkg_install_script:
   - pkg install -y git-lite
   script:
-  - make obj
-  - make -j$(sysctl -n hw.ncpu)
-  install_script:
-  - make install
-  test_script:
-  - make regress
-  - make -C regress -i regress
+  - sh util/got-build-regress.sh -b $(git branch --show-current) -w $(pwd) emaste@freebsd.org
+  check_script:
   - ls -lR /tmp/got-test-*
   - sh core-backtrace.sh
