@@ -14,7 +14,7 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-. ./common.sh
+. `dirname $0`/common.sh
 
 test_histedit_no_op() {
 	local testroot=`test_init histedit_no_op`
