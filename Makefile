@@ -1,11 +1,13 @@
-SUBDIR = openbsd-compat libexec got tog
 
 .PHONY: release dist
 
-.if make(regress) || make(obj) || make(clean) || make(release)
-SUBDIR += regress
 .if make(regress)
+SUBDIR = regress
 SUBDIR_TARGETS += regress
+.else
+SUBDIR = openbsd-compat libexec got tog
+.if make(obj) || make(clean) || make(release)
+SUBDIR += regress
 .endif
 
 .endif
