@@ -85,7 +85,7 @@ sysctl -n kern.version >> build.log
 
 #printf "\n\n\tUpdating the work tree\n\n" >> build.log
 #log_cmd build.log cat .got/base-commit
-old_basecommit=`cat .got/base-commit`
+#old_basecommit=`cat .got/base-commit`
 #log_cmd build.log /usr/local/bin/got update -b "$branch"
 #update_status="$?"
 #if [ "$update_status" != "0" ]; then
