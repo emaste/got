@@ -65,6 +65,10 @@ if [ $? -ne 0 ]; then
 	exit 1
 fi
 
+lockfile()
+{
+}
+
 lockfile -r 3 "$lockfile" || exit 1
 trap "rm -f '$lockfile'" HUP INT QUIT KILL TERM
 
