@@ -120,7 +120,7 @@ fi
 
 printf "\n\n\tRunning tests\n\n" >> build.log
 log_cmd regress.log env PATH=$HOME/bin:$PATH make regress
-log_cmd regress.log env PATH=$HOME/bin:$PATH make -i -C regress regress
+#log_cmd regress.log env PATH=$HOME/bin:$PATH make -i -C regress regress
 regress_status="$?"
 cat regress.log >> build.log
 egrep "test.*failed" regress.log > failures.log

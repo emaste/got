@@ -8,6 +8,10 @@ SUBDIR_TARGETS += regress
 SUBDIR = openbsd-compat libexec got tog
 .if make(obj) || make(clean) || make(release)
 SUBDIR += regress
+.if make(regress)
+SUBDIR_TARGETS += regress
+.endif
+
 .endif
 
 .endif
