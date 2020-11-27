@@ -10,12 +10,12 @@ task:
   - pkg install -y git-lite
   script:
   - sh util/got-build-regress.sh -b $(git branch --show-current) -f -w $(pwd) emaste@freebsd.org
-  check_script:
-  - echo === build.log
+  build_log_script:
   - cat build.log || true
-  - echo === regress.log
+  regress_log_script:
   - cat regress.log || true
-  - echo === failures.log
+  failure_log_script:
   - cat failures.log || true
+  final_script:
   - ls -lR /tmp/got-test-* || true
   - sh core-backtrace.sh
