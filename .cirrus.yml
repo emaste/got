@@ -12,5 +12,6 @@ task:
   - sh util/got-build-regress.sh -b $(git branch --show-current) -f -w $(pwd) emaste@freebsd.org
   check_script:
   - cat build.log || true
+  - cat regress.log || true
   - ls -lR /tmp/got-test-* || true
   - sh core-backtrace.sh
