@@ -14,7 +14,7 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-. ./common.sh
+. `dirname $0`/common.sh
 
 test_log_in_repo() {
 	local testroot=`test_init log_in_repo`

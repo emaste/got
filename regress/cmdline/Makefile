@@ -6,78 +6,78 @@ NOOBJ=Yes
 GOT_TEST_ROOT=/tmp
 
 checkout:
-	./checkout.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/checkout.sh -q -r "$(GOT_TEST_ROOT)"
 
 update:
-	./update.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/update.sh -q -r "$(GOT_TEST_ROOT)"
 
 status:
-	./status.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/status.sh -q -r "$(GOT_TEST_ROOT)"
 
 log:
-	./log.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/log.sh -q -r "$(GOT_TEST_ROOT)"
 
 add:
-	./add.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/add.sh -q -r "$(GOT_TEST_ROOT)"
 
 rm:
-	./rm.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/rm.sh -q -r "$(GOT_TEST_ROOT)"
 
 diff:
-	./diff.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/diff.sh -q -r "$(GOT_TEST_ROOT)"
 
 blame:
-	./blame.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/blame.sh -q -r "$(GOT_TEST_ROOT)"
 
 branch:
-	./branch.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/branch.sh -q -r "$(GOT_TEST_ROOT)"
 
 tag:
-	./tag.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/tag.sh -q -r "$(GOT_TEST_ROOT)"
 
 ref:
-	./ref.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/ref.sh -q -r "$(GOT_TEST_ROOT)"
 
 commit:
-	./commit.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/commit.sh -q -r "$(GOT_TEST_ROOT)"
 
 revert:
-	./revert.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/revert.sh -q -r "$(GOT_TEST_ROOT)"
 
 cherrypick:
-	./cherrypick.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/cherrypick.sh -q -r "$(GOT_TEST_ROOT)"
 
 backout:
-	./backout.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/backout.sh -q -r "$(GOT_TEST_ROOT)"
 
 rebase:
-	./rebase.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/rebase.sh -q -r "$(GOT_TEST_ROOT)"
 
 import:
-	./import.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/import.sh -q -r "$(GOT_TEST_ROOT)"
 
 histedit:
-	./histedit.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/histedit.sh -q -r "$(GOT_TEST_ROOT)"
 
 integrate:
-	./integrate.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/integrate.sh -q -r "$(GOT_TEST_ROOT)"
 
 stage:
-	./stage.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/stage.sh -q -r "$(GOT_TEST_ROOT)"
 
 unstage:
-	./unstage.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/unstage.sh -q -r "$(GOT_TEST_ROOT)"
 
 cat:
-	./cat.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/cat.sh -q -r "$(GOT_TEST_ROOT)"
 
 clone:
-	./clone.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/clone.sh -q -r "$(GOT_TEST_ROOT)"
 
 fetch:
-	./fetch.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/fetch.sh -q -r "$(GOT_TEST_ROOT)"
 
 tree:
-	./tree.sh -q -r "$(GOT_TEST_ROOT)"
+	${.CURDIR}/tree.sh -q -r "$(GOT_TEST_ROOT)"
 
 .include <bsd.regress.mk>
