@@ -9,6 +9,7 @@ task:
   pkg_install_script:
   - pkg install -y git-lite
   script:
+  - make obj
   - make -j$(sysctl -n hw.ncpu)
   install_script:
   - make install
