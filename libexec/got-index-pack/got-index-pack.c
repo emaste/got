@@ -40,6 +40,8 @@
 #include <assert.h>
 #include <dirent.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 #include "got_object.h"
 

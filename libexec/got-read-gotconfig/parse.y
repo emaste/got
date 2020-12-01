@@ -36,6 +36,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "openbsd-compat.h"
+
 #include "got_error.h"
 #include "gotconfig.h"
 

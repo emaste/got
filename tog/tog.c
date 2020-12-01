@@ -40,6 +40,8 @@
 #include <libgen.h>
 #include <regex.h>
 
+#include "openbsd-compat.h"
+
 #include "got_version.h"
 #include "got_error.h"
 #include "got_object.h"
